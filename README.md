@@ -37,3 +37,16 @@ Test Conflict
 12. git pull --rebase upstream main
 13. git push –force origin main
     - uptodate
+
+Configure Git to use SSH to sign commits and tags (add verified in commits)
+
+1. Set SSH signing key in Git => in Github, add key (choose signing key)
+2. git config gpg.format ssh
+3. git config user.signingkey PATH_TO_SSH.PUB
+4. git config gpg.format
+5. git config user.signingkey
+6. git status
+7. test: make changes & git add .
+8. git commit -S -m “message”
+9. git log
+10. git push origin main
